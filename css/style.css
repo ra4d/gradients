@@ -1,0 +1,78 @@
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+	font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: var(--gradient);
+	background-size: 300%;
+	background-position: left;
+	animation: bg-gradient 5s linear infinite alternate;
+}
+.contant {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  background-color: white;
+  padding: 30px;
+}
+.title {
+  margin: 0 0 0.5em;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 3em;
+	color: transparent;
+	line-height: 0.8;
+	margin: 0;
+	background-image: var(--gradient);
+	background-clip: text;
+	background-size: 400%;
+	background-position: left;
+	animation: bg-gradient 5s infinite alternate ;
+
+}
+
+.fun {
+  border: none;
+  padding: 0.5em 1.5em;
+  font-size: 2em;
+  background-image: var(--gradient);
+	background-size: 300%;
+	background-position: left;
+	cursor: pointer;
+	transition: background-position 1s  ;
+
+
+}
+.fun:hover,
+.fun:focus {
+	background-position: right;
+}
+
+@keyframes bg-gradient {
+	0%{
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
